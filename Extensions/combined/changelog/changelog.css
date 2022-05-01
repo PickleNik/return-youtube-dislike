@@ -23,8 +23,9 @@ body {
 
 img {
   border-radius: 1rem;
-  box-shadow: 0 0 2rem 0 black;
-  margin: 1rem -1rem;
+  filter: brightness(1.1) contrast(0.9);
+  box-shadow: 0 0 1rem 0 black;
+  margin: 0.5rem -1rem 1rem -1rem;
 }
 
 button {
