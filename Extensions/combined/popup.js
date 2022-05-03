@@ -86,11 +86,11 @@ document.getElementById("number_format").addEventListener("change", (ev) => {
   chrome.storage.sync.set({ numberDisplayFormat: ev.target.value });
 });
 
-document
-  .getElementById("number_reformat_likes")
-  .addEventListener("click", (ev) => {
-    chrome.storage.sync.set({ numberDisplayReformatLikes: ev.target.checked });
-  });
+// document
+//   .getElementById("number_reformat_likes")
+//   .addEventListener("click", (ev) => {
+//     chrome.storage.sync.set({ numberDisplayReformatLikes: ev.target.checked });
+//   });
 
 /*   Advanced Toggle   */
 const advancedToggle = document.getElementById("advancedToggle");
@@ -280,14 +280,14 @@ function handleColorThemeChangeEvent(value) {
 }
 
 function updateColorThemePreviewContent(themeName) {
-  document.getElementById("color_theme_example_like").style.backgroundColor =
-    getColorFromTheme(themeName, true);
-  document.getElementById("color_theme_example_dislike").style.backgroundColor =
-    getColorFromTheme(themeName, false);
-  document.getElementById("color_example_dislike").style.color =
-    getColorFromTheme(themeName, false);
-  document.getElementById("color_example_like").style.color =
-    getColorFromTheme(themeName, true);
+  // document.getElementById("color_theme_example_like").style.backgroundColor =
+  //   getColorFromTheme(themeName, true);
+  // document.getElementById("color_theme_example_dislike").style.backgroundColor =
+  //   getColorFromTheme(themeName, false);
+  // document.getElementById("color_example_dislike").style.color =
+  //   getColorFromTheme(themeName, false);
+  // document.getElementById("color_example_like").style.color =
+  //   getColorFromTheme(themeName, true);
 }
 
 function handleNumberDisplayRoundDownChangeEvent(value) {
@@ -383,9 +383,9 @@ function getColorFromTheme(colorTheme, voteIsLike) {
     case "classic":
     default:
       if (voteIsLike === true) {
-        colorString = "lime";
+        colorString = "green";
       } else {
-        colorString = "red";
+        colorString = "darkred";
       }
   }
   return colorString;

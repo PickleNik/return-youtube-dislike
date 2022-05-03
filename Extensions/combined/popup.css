@@ -11,6 +11,14 @@
   color-scheme: light dark;
 }
 
+//dark theme
+[data-theme="dark"] {
+  --font-color: #c1bfbd;
+  --link-color:#0a86da;
+  --link-white-color:#c1bfbd;
+  --bg-color: #111;
+}
+
 /* Window Styling */
 html,
 body {
@@ -106,7 +114,12 @@ button:hover {
   border: 2px solid var(--secondary);
   border-radius: 0.5rem;
   padding: 1rem;
-  overflow-y: auto;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* enable this if additional settings don't fit in the panel */
+  /* overflow-y: auto; */
 }
 
 ::-webkit-scrollbar {
@@ -193,9 +206,10 @@ input:checked + .slider:before {
   background: var(--primary);
 }
 
-select {
+.custom-select > select {
   background: var(--secondary);
   border-radius: 0.5rem;
+  /* border: 2px solid var(--secondary); */
   padding: .5rem .75rem;
   color: var(--white);
   border: 0;

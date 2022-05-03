@@ -105,9 +105,7 @@
       <label class="switch" data-hover="__MSG_textSettingsHover__">
         <input type="checkbox" id="disable_vote_submission" />
         <span class="slider" />
-        <span class="switchLabel" title="__MSG_textSettings__">
-          __MSG_textSettings__
-        </span>
+        <span class="switchLabel"> __MSG_textSettings__ </span>
       </label>
       <br />
       <!-- <label
@@ -119,7 +117,7 @@
         <span class="switchLabel">Show rounded down numbers</span>
       </label>
       <br /> -->
-      <label
+      <!-- <label
         class="switch"
         data-hover="Make likes and dislikes format consistent"
       >
@@ -127,142 +125,176 @@
         <span class="slider" />
         <span class="switchLabel">Re-format like numbers</span>
       </label>
-      <br />
-      <label for="number_format" style="color: var(--lightGrey); font-size: .75rem;">Number format: </label>
-      <div class="custom-select">
-        <select name="number_format" id="number_format">
-          <option value="compactShort" id="number_format_compactShort"></option>
-          <option value="compactLong" id="number_format_compactLong"></option>
-          <option value="standard" id="number_format_standard"></option>
-        </select>
-      </div>
-      <br />
-      <div class="custom-select" style="display: none;">
-        <select name="color_theme" id="color_theme">
-          <option value="classic" id="color_theme_classic">Classic</option>
-          <option value="accessible" id="color_theme_accessible">
-            Accessible
-          </option>
-          <option value="neon" id="color_theme_neon">Neon</option>
-        </select>
-        <label for="color_theme">Color theme</label>
-      </div>
-      <span
-        id="color_theme_example_like"
-        style="
-          display: none;
-          vertical-align: text-top;
-          width: 1em;
-          height: 1em;
-        "
-      ></span>
-      <span
-        id="color_theme_example_dislike"
-        style="
-          display: none;
-          vertical-align: text-top;
-          width: 1em;
-          height: 1em;
-        "
-      ></span>
-      <br />
-      <label class="switch" data-hover="Use custom colors for ratio bar.">
-        <input type="checkbox" id="colored_bar" />
-        <span class="slider" />
-        <span class="switchLabel">Colorize ratio bar</span>
-      </label>
-      <br />
-      <label class="switch" data-hover="Use custom colors for thumb icons.">
-        <input type="checkbox" id="colored_thumbs" />
-        <span class="slider" />
-        <span class="switchLabel">Colorize thumbs</span>
-      </label>
-      <br />
-      <br />
+      <br /> -->
 
-      <div class="flex-row-align-center" style="margin: 1rem;">
-        <!-- LIKE PREVIEW -->
-        <div style="display: inline-block" id="color_example_like">
-          <div class="flex-row-align-center" style="position: relative;">
-            
-            <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            preserveAspectRatio="xMidYMid meet"
-            focusable="false"
-            style="display: inline-block; transform: rotate(180deg);"
-            >
-            <g>
-              <path
-              d="M18,4h3v10h-3V4z M5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21c0.58,0,1.14-0.24,1.52-0.65L17,14V4H6.57 C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14z"
-              ></path>
-            </g>
-          </svg>
-          <svg
-          width="24"
-          height="24"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          preserveAspectRatio="xMidYMid meet"
-          focusable="false"
-          style="display: inline-block; transform: rotate(180deg);"
+      <div>
+        <div style="color: var(--lightGrey); font-weight: 690; font-size: 1.1rem; margin-bottom: 1rem;"
+          >Theming
+        </div>
+        <div class="custom-select" style="margin-bottom: 1rem; display: none;">
+          <select name="color_theme" id="color_theme" style="width: 100%">
+            <option value="classic" id="color_theme_classic">Classic</option>
+            <option value="accessible" id="color_theme_accessible">
+              Accessible
+            </option>
+            <option value="neon" id="color_theme_neon">Neon</option>
+          </select>
+        </div>
+        <span
+          id="color_theme_example_like"
+          style="
+            display: none;
+            vertical-align: text-top;
+            width: 1em;
+            height: 1em;
+          "
+        ></span>
+        <span
+          id="color_theme_example_dislike"
+          style="
+            display: none;
+            vertical-align: text-top;
+            width: 1em;
+            height: 1em;
+          "
+        ></span>
+        <div class="flex-row-align-center" style="margin: 0.5rem 0; padding-right: 1rem">
+          <label class="switch" data-hover="Theme Thumbs">
+            <input type="checkbox" id="colored_thumbs" />
+            <span class="slider" />
+          </label>
+          <!-- LIKE PREVIEW -->
+          <div
+            style="display: inline-block; margin-left: 1rem"
+            id="color_example_like"
           >
-          <g>
-            <path
-            d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z"
-            class="style-scope yt-icon"
-            ></path>
-          </g>
-        </svg>
-        <div style="font-weight: 420; margin-left: .5rem;">69,420</div>
-        <input type="color" id="color_picker" value="#112233" style=" position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%;" />
-      </div>
-    </div>
-    <!-- DISLIKE PREVIEW -->
-    <div style="display: iniline-block; margin-left: 2rem;" id="color_example_dislike">
-      <div class="flex-row-align-center" style="position: relative;">
-
-            <svg
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              preserveAspectRatio="xMidYMid meet"
-              focusable="false"
-              style="display: inline-block"
-            >
-              <g>
-                <path
-                d="M18,4h3v10h-3V4z M5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21c0.58,0,1.14-0.24,1.52-0.65L17,14V4H6.57 C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14z"
-                ></path>
-              </g>
-            </svg>
-            <svg
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              preserveAspectRatio="xMidYMid meet"
-              focusable="false"
-              style="display: inline-block"
-            >
-            <g>
-              <path
-              d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z"
-              class="style-scope yt-icon"
-              ></path>
-            </g>
-          </svg>
-          <div style="font-weight: 420; margin-left: .5rem;">69,420</div>
-          <input type="color" id="color_picker" value="#112233" style=" position: absolute; left: 0; top: 0;opacity: 0; width: 100%; height: 150%;" />
-
+            <div class="flex-row-align-center" style="position: relative">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                style="display: inline-block; transform: rotate(180deg)"
+              >
+                <g>
+                  <path
+                    d="M18,4h3v10h-3V4z M5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21c0.58,0,1.14-0.24,1.52-0.65L17,14V4H6.57 C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14z"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                style="display: inline-block; transform: rotate(180deg)"
+              >
+                <g>
+                  <path
+                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z"
+                    class="style-scope yt-icon"
+                  ></path>
+                </g>
+              </svg>
+              <!-- <div style="font-weight: 420; margin-left: 0.5rem">69,420</div> -->
+              <input
+                type="color"
+                id="color_picker"
+                value="#112233"
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  opacity: 0;
+                  width: 100%;
+                  height: 200%;
+                "
+              />
+            </div>
+          </div>
+          <!-- DISLIKE PREVIEW -->
+          <div
+            style="display: iniline-block; margin-left: 1rem"
+            id="color_example_dislike"
+          >
+            <div class="flex-row-align-center" style="position: relative">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                style="display: inline-block"
+              >
+                <g>
+                  <path
+                    d="M17,4h-1H6.57C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21 c0.58,0,1.14-0.24,1.52-0.65L17,14h4V4H17z M10.4,19.67C10.21,19.88,9.92,20,9.62,20c-0.26,0-0.5-0.11-0.63-0.3 c-0.07-0.1-0.15-0.26-0.09-0.47l1.52-4.94l0.4-1.29H9.46H5.23c-0.41,0-0.8-0.17-1.03-0.46c-0.12-0.15-0.25-0.4-0.18-0.72l1.34-6 C5.46,5.35,5.97,5,6.57,5H16v8.61L10.4,19.67z M20,13h-3V5h3V13z"
+                    class="style-scope yt-icon"
+                  ></path>
+                </g>
+              </svg>
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                style="display: inline-block"
+              >
+                <g>
+                  <path
+                    d="M18,4h3v10h-3V4z M5.23,14h4.23l-1.52,4.94C7.62,19.97,8.46,21,9.62,21c0.58,0,1.14-0.24,1.52-0.65L17,14V4H6.57 C5.5,4,4.59,4.67,4.38,5.61l-1.34,6C2.77,12.85,3.82,14,5.23,14z"
+                  ></path>
+                </g>
+              </svg>
+              <!-- <div style="font-weight: 420; margin-left: 0.5rem">69,420</div> -->
+              <div>
+                <select name="number_format" id="number_format" style="font-weight: 600; font-size: 1.1rem; text-transform: uppercase; border: 0; width: 100px !important; margin-left: 0.25rem; background: var(--background) !important; color: inherit !important;">
+                  <option value="compactShort" id="number_format_compactShort"></option>
+                  <option value="compactLong" id="number_format_compactLong"></option>
+                  <option value="standard" id="number_format_standard"></option>
+                </select>
+              </div>
+              <input
+                type="color"
+                id="color_picker"
+                value="#112233"
+                style="
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  opacity: 0;
+                  width: 50%;
+                  height: 200%;
+                "
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex-row-align-center" style="margin-bottom: 1rem; padding-right: 1rem">
+          <label class="switch" data-hover="Theme Ratio Bar">
+            <input type="checkbox" id="colored_bar" />
+            <span class="slider" />
+          </label>
+          <div style="width: 100%; margin-left: 1rem">
+            <div style="width: 100%; height: 2px; background: grey">
+              <div style="width: 19%; height: 100%; background: white"></div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="color: var(--tertiary); font-size: 0.9rem; margin-bottom: -0.5rem; margin-left: -0.5rem"
+        >
+          * Refresh watch page to see changes
         </div>
       </div>
-    </div>
-    <div style="color: var(--lightGrey); font-size: .8rem;">* Refresh watch page to see changes *</div>
-  </fieldset>
+    </fieldset>
   </body>
   <script src="popup.js"></script>
 </html>
